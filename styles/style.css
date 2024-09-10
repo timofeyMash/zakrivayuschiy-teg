@@ -349,6 +349,8 @@
   margin-right: 8px;
   position: relative;
   transition: fill ease 0.3s;
+  height: 21px;
+  width: 21px;
 }
 
 .save-button_text {
@@ -380,7 +382,7 @@
   transition: color ease 0.3s;;
 }
 
-.save-button:hover .save-icon_path {
+.save-button:hover .save-icon {
   fill: var(--background-color);
   transition: fill ease 0.3s;;
 }
