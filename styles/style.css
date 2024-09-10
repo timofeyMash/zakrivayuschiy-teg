@@ -349,8 +349,6 @@
   margin-right: 8px;
   position: relative;
   transition: fill ease 0.3s;
-  height: 21px;
-  width: 21px;
 }
 
 .save-button_text {
@@ -383,8 +381,8 @@
 }
 
 .save-button:hover .save-icon {
-  fill: var(--background-color);
-  transition: fill ease 0.3s;;
+  color: var(--background-color);
+  transition: color ease 0.3s;;
 }
 
 .save-button:focus {
