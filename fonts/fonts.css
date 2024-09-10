@@ -19,12 +19,14 @@
   font-family: 'PressStart';
   src: url(PressStart2P-Regular.woff) format('woff2 supports variations'),
         url(PressStart2P-Regular.woff) format('woff2-variations');
-  font-weight: normal;
+  font-weight: 400;
   font-display: swap;
 }
 
-@supports (font-variation-settings: normal) {
-  body {
-    font-family: 'inter', sans-serif;
-  }
+@font-face {
+  font-family: 'PressStart';
+  src: url(PressStart2P-Regular.woff) format('woff2 supports variations'),
+        url(PressStart2P-Regular.woff) format('woff2-variations');
+  font-weight: 785;
+  font-display: swap;
 }

@@ -19,6 +19,7 @@
   min-block-size: 100dvb;
   font-family: "inter", sans-serif;
   background-color: var(--background-color);
+  font-variation-settings: 'wght' 785, 'wght' 400;
 }
 
 .page::before {
@@ -151,6 +152,7 @@
   border-bottom: var(--font-color) 2px solid;
   line-height: 31px;
   padding-left: 10px;
+  font-variation-settings: 'wght' 785;
 }
 
 .content__card_image {
@@ -343,16 +345,17 @@
 }
 
 .save-icon {
-  fill: var(--font-color);
+  color: var(--font-color);
   display: flex;
   justify-content: left;
   margin-right: 8px;
   position: relative;
-  transition: fill ease 0.3s;
+  transition: color ease 0.3s;
 }
 
 .save-button_text {
   font-size: 14px;
+  color: var(--font-color);
   transition: color ease 0.3s;
 }
 
@@ -365,7 +368,6 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  color: var(--font-color);
   width: 339px;
   height: 55px;
   align-items: center;
