@@ -1,1 +1,56 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --font-color: #00CC14;
+  --background-color: black;
+  --pattern-color: url("../svg/pattern-dark.svg");
+}
+
+@media (width < 376px) {
+  .header__title {
+    font-size: 49px;
+    padding: 120px 14px 20px;
+  }
+
+  .header {
+    font-size: 14px;
+    height: 327px;
+    padding-bottom: 25px;
+  }
+
+  .content__card_title {
+    line-height: 21.78px;
+    padding: 4px 10px 6px;
+  }
+
+  .header__subtitle {
+    font-size: 14px;
+  }
+
+  .content__card_image {
+    width: 371px;
+    height: 371px;
+  }
+
+  .content__card {
+    height: 760px;
+  }
+
+  .save-button {
+    width: 306px;
+    height: 84px;
+    align-items: normal;
+    padding: 15px 0;
+    display: grid;
+    grid-template-rows: repeat(1, 2fr);
+  }
+
+  .save-icon {
+    margin: auto auto 9px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .content__card_text:first-child {
+    margin-top: 23px;
+  }
+}
