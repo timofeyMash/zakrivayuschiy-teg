@@ -28,7 +28,7 @@
   background-image: var(--pattern-color);
   background-size: 4px;
   z-index: -5;
-  height: 75%;
+  height: 76%;
   width: 100%;
   margin-top: -100px;
 }
@@ -40,6 +40,7 @@
   border: 2px solid var(--font-color);
   width: 100%;
   max-width: 700px;
+  max-height: 368px;
   color: var(--font-color);
   margin: 100px auto;
   text-align: center;
@@ -359,12 +360,13 @@
 }
 
 .save-icon {
-  color: var(--font-color);
+  fill: var(--font-color);
+  color: yellow;
   display: flex;
   justify-content: left;
   margin-right: 8px;
   position: relative;
-  transition: color ease 1s;
+  transition: fill ease 1s;
 }
 
 .save-button {
@@ -389,11 +391,11 @@
 }
 
 .save-button:hover .save-icon {
-  color: var(--background-color);
-  transition: color ease 1s;
+  fill: var(--background-color);
+  transition: fill ease 1s;
 }
 
-@media (width < 376px) {
+@media (width <= 376px) {
   .header__title {
     font-size: 49px;
     padding: 120px 14px 20px;
@@ -401,6 +403,7 @@
 
   .header {
     font-size: 14px;
+    margin-bottom: 96px;
   }
 
   .content__card_title {
@@ -422,7 +425,7 @@
   }
 
   .save-button {
-    width: 306px;
+    width: 310px;
     height: 84px;
     align-items: normal;
     padding: 15px 0;
