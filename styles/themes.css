@@ -9,24 +9,16 @@
   --font-color: #00CC14;
   --background-color: black;
   --pattern-color: url("../svg/pattern-dark.svg");
+  --variation-wght-text: 485;
+  --variation-wght-title: 785;
 }
 
 .page.theme-light {
   --font-color: black;
   --background-color: white;
   --pattern-color: url("../svg/pattern-light.svg");
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --font-color: #00CC14;
-    --background-color: black;
-    --pattern-color: url("../svg/pattern-dark.svg");
-  }
-
-  .favicon {
-    fill: #00CC14;
-  }
+  --variation-wght-text: 400;
+  --variation-wght-title: 700;
 }
 
 @media (prefers-color-scheme: light) {
@@ -34,6 +26,8 @@
     --font-color: black;
     --background-color: white;
     --pattern-color: url("../svg/pattern-light.svg");
+    --variation-wght-text: 400;
+    --variation-wght-title: 700;
   }
 
   .favicon {

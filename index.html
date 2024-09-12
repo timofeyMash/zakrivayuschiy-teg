@@ -7,16 +7,16 @@
   <link rel="icon" href="svg/favicon.svg">
   <title>Закрывающий тег</title>
   <link rel="stylesheet" href="./fonts/fonts.css"/>
+  <link rel="stylesheet" href="./styles/variables.css"/>
   <link rel="stylesheet" href="./styles/globals.css"/>
   <link rel="stylesheet" href="./styles/style.css"/>
-  <link rel="stylesheet" href="./styles/variables.css"/>
   <link rel="stylesheet" href="./styles/animations.css"/>
   <link rel="stylesheet" href="./styles/themes.css"/>
 </head>
 <body class="page">
 <header class="header">
-  <h1 class="header__title">&lt;/HTML&gt;</h1>
-  <h2 class="header__subtitle">закрывающий тег</h2>
+  <h1 class="header__title"><a href="#" class="header__logo-link">&lt;/HTML&gt;</a></h1>
+  <h1 class="header__subtitle">закрывающий тег</h1>
   <nav class="theme-menu header__theme-menu">
     <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
     <ul class="theme-menu__list">
@@ -45,7 +45,7 @@
 </header>
 <main class="content">
   <article class="content__card">
-    <h3 class="content__card_title">Фритрек и нулевой спринт: Подготовка к работе</h3>
+    <h2 class="content__card_title">Фритрек и нулевой спринт: Подготовка к работе</h2>
     <img src="images/image.png" class="content__card_image" alt="Фургон">
     <div class="content__card_subtitle">
       <div class="content__card_text-container">
@@ -58,7 +58,7 @@
         </p>
       </div>
       <div class="like-section">
-        <button class="card__icon-button">
+        <button class="card__icon-button" type="submit">
           <svg width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg"
                class="like-icon">
             <g class="heart">
@@ -76,19 +76,17 @@
             </g>
           </svg>
         </button>
-        <button class="card__like-button"><span class="button__text">Like</span></button>
+        <button class="card__like-button button-decoration" type="submit"><span class="button__text">Like</span></button>
       </div>
     </div>
   </article>
-</main>
-<footer class="footer">
-  <button class="save-button">
+  <button class="save-button button-decoration" type="submit">
     <svg width="21" height="21" viewBox="0 0 21 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="save-icon">
       <use href="#save-icon"/>
     </svg>
-    <span class="save-button_text">Сохранить на память</span>
+    <span class="button__text">Сохранить на память</span>
   </button>
-</footer>
+</main>
 <script src="./scripts/set-theme.js"></script>
 <script src="./scripts/like.js"></script>
 <svg xmlns="http://www.w3.org/2000/svg">
