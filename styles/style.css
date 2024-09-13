@@ -137,7 +137,7 @@
   display: grid;
   width: 100%;
   max-width: 700px;
-  margin: auto;
+  margin: auto auto 100px;
   gap: 52px;
   color: var(--font-color);
 }
