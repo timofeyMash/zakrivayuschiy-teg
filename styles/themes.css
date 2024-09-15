@@ -4,3 +4,35 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+.page.theme-dark {
+  --font-color: #00CC14;
+  --background-color: black;
+  --net-color:  repeating-linear-gradient(to right, #000, transparent 2px),
+                repeating-linear-gradient(to bottom, #000, transparent 2px),
+                repeating-linear-gradient(to right, #007f0c, #004306);
+  --variation-wght-text: 465;
+  --variation-wght-title: 785;
+}
+
+.page.theme-light {
+  --font-color: black;
+  --background-color: white;
+  --net-color:  repeating-linear-gradient(to right, #d3d3d3, transparent 2px),
+                repeating-linear-gradient(to bottom, #d3d3d3, transparent 2px),
+                repeating-linear-gradient(to right, #e7e7e7, #1a1a1a);
+  --variation-wght-text: 400;
+  --variation-wght-title: 700;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --font-color: black;
+    --background-color: white;
+    --net-color:  repeating-linear-gradient(to right, #d3d3d3, transparent 2px),
+                  repeating-linear-gradient(to bottom, #d3d3d3, transparent 2px),
+                  repeating-linear-gradient(to right, #e7e7e7, #1a1a1a);
+    --variation-wght-text: 400;
+    --variation-wght-title: 700;
+  }
+}
