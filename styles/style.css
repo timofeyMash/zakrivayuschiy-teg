@@ -439,7 +439,7 @@
   mix-blend-mode: hard-light;
 }
 
-@supports((-webkit-text-stroke-width: 0.5px) or (-webkit-text-stroke-color: var(--background-color))) {
+@supports((text-stroke: 0.5px var(--background-color)) or (-webkit-text-stroke: 0.5px var(--background-color))) {
   .image-label {
     text-shadow: -1px 0 var(--background-color), 0 1px var(--background-color), 1px 0 var(--background-color), 0 -1px var(--background-color);
   }
