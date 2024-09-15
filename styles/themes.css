@@ -11,7 +11,7 @@
   --net-color: repeating-linear-gradient(to right, #000, transparent 2px),
   repeating-linear-gradient(to bottom, #000, transparent 2px),
   repeating-linear-gradient(to right, #007f0c, #004306);
-  --variation-wght-text: 485;
+  --variation-wght-text: 465;
   --variation-wght-title: 785;
 }
 
