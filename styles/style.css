@@ -259,9 +259,10 @@
   width: 100%;
 }
 
-.card__like-button:hover .button__text {
+.button-decoration:hover .button__text {
   color: var(--background-color);
   transition: color ease 1s;
+  mix-blend-mode: difference;
 }
 
 .button__text {
@@ -365,7 +366,6 @@
 
 .save-icon {
   fill: var(--font-color);
-  color: yellow;
   display: flex;
   justify-content: left;
   margin-right: 8px;
@@ -386,12 +386,6 @@
   align-items: center;
   display: flex;
   box-shadow: none;
-}
-
-.save-button:hover .button__text {
-  color: var(--background-color);
-  position: relative;
-  transition: color ease 1s;
 }
 
 .save-button:hover .save-icon {
@@ -442,6 +436,7 @@
   -webkit-text-stroke-width: 0.5px;
   font-family: 'PressStart', sans-serif;
   z-index: 2;
+  mix-blend-mode: hard-light;
 }
 
 @supports((-webkit-text-stroke-width: 0.5px) or (-webkit-text-stroke-color: var(--background-color))) {
@@ -452,6 +447,43 @@
 
 .image-container {
   position: relative;
+}
+
+.popup {
+  background-color: var(--background-color);
+  border: 2px solid var(--font-color);
+  position: fixed;
+  padding: 30px;
+  width: 353px;
+  overflow-x: hidden;
+}
+
+.popup-button {
+  margin-top: 30px;
+  font-family: 'PressStart', sans-serif;
+  background-color: var(--background-color);
+  border: var(--font-color) 2px solid;
+  padding: 10px 132.5px;
+  position: relative;
+  overflow: hidden;
+  max-width: 293px;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.popup_text {
+  color: var(--font-color);
+  font-family: 'PressStart', sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.popup_content {
+  display: grid;
+  grid-template-columns: 39px 234px;
+  gap: 20px;
+  align-items: center;
 }
 
 @media (width <= 375px) {

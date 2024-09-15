@@ -280,7 +280,7 @@
     <h2 class="content__card_title third-sprint-two">3 спринт: Когда опускаются руки</h2>
     <div class="image-container">
       <label class="image-label">&lt;lifes-style: none;&gt;</label>
-      <img src="images/track.png" class="content__card_image" alt="Фургон">
+      <img src="images/track.png" class="content__card_image third-sprint-two" alt="Фургон">
     </div>
     <div class="content__card_subtitle">
       <div class="content__card_text-container">
@@ -352,12 +352,26 @@
       </div>
     </div>
   </article>
-  <button class="save-button button-decoration" type="submit">
+  <button class="save-button button-decoration" type="submit" onclick="window['popup'].showModal()">
     <svg width="21" height="21" viewBox="0 0 21 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="save-icon">
       <use href="svg/floppy.svg#rer"/>
     </svg>
     <span class="button__text">Сохранить на память</span>
   </button>
+  <dialog id="popup" class="popup">
+    <div class="popup_content">
+      <svg width="39" height="39" viewBox="0 0 21 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="save-icon">
+        <use href="svg/floppy.svg#rer"/>
+      </svg>
+      <p class="popup_text">
+        Вставьте
+        дискету, чтобы продолжить
+      </p>
+    </div>
+    <button type="submit" onclick="window['popup'].close()" class="popup-button button-decoration">
+      <span class="button__text">OK</span>
+    </button>
+  </dialog>
 </main>
 <script src="./scripts/set-theme.js"></script>
 <script src="./scripts/like.js"></script>
