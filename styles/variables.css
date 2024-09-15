@@ -2,7 +2,9 @@
 :root {
   --font-color: #00CC14;
   --background-color: black;
-  --pattern-color: url("../svg/pattern-dark.svg");
-  --variation-wght-text: 485;
+  --net-color:  repeating-linear-gradient(to right, #000, transparent 2px),
+                repeating-linear-gradient(to bottom, #000, transparent 2px),
+                repeating-linear-gradient(to right, #007f0c, #004306);
+  --variation-wght-text: 465;
   --variation-wght-title: 785;
 }

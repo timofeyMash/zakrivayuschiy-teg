@@ -39,12 +39,10 @@
 
 @keyframes heart-sparks {
   from {
-    transition: opacity 0.3s;
     opacity: 0;
   }
 
   to {
-    transition: opacity 0.3s;
     opacity: 1;
   }
 }
