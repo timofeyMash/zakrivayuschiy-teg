@@ -25,8 +25,7 @@
 .page::before {
   content: "";
   position: fixed;
-  background-image: var(--pattern-color);
-  background-size: 4px;
+  background-image: var(--net-color);
   z-index: -5;
   height: 76%;
   width: 100%;
@@ -398,6 +397,61 @@
 .save-button:hover .save-icon {
   fill: var(--background-color);
   transition: fill ease 1s;
+}
+
+
+.first-sprint-one {
+  filter: grayscale(0.8);
+}
+
+.first-sprint-two {
+  filter: saturate(3);
+}
+
+.second-sprint-one {
+  filter: brightness(2)
+  grayscale(0.5);
+}
+
+.second-sprint-two {
+  filter: invert(1);
+}
+
+.third-sprint-one {
+  filter: sepia(1);
+}
+
+.third-sprint-two {
+  filter: blur(1rem);
+}
+
+.im-here {
+  filter: brightness(1.5)
+  contrast(10)
+  invert(0.8);
+}
+
+.image-label {
+  font-size: 14px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  color: var(--font-color);
+  opacity: 0.5;
+  -webkit-text-stroke-color: var(--background-color);
+  -webkit-text-stroke-width: 0.5px;
+  font-family: 'PressStart', sans-serif;
+  z-index: 2;
+}
+
+@supports((-webkit-text-stroke-width: 0.5px) or (-webkit-text-stroke-color: var(--background-color))) {
+  .image-label {
+    text-shadow: -1px 0 var(--background-color), 0 1px var(--background-color), 1px 0 var(--background-color), 0 -1px var(--background-color);
+  }
+}
+
+.image-container {
+  position: relative;
 }
 
 @media (width <= 375px) {
