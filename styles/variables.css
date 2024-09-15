@@ -4,7 +4,8 @@
   --background-color: black;
   --net-color:  repeating-linear-gradient(to right, #000, transparent 2px),
   repeating-linear-gradient(to bottom, #000, transparent 2px),
-  repeating-linear-gradient(to right, #007f0c, #004306);
+  repeating-linear-gradient(to bottom, #007f0c 0.01%, #004306);
   --variation-wght-text: 465;
   --variation-wght-title: 785;
+  --button-decoration: var(--font-color);
 }

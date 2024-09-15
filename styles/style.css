@@ -26,6 +26,7 @@
   content: "";
   position: fixed;
   background-image: var(--net-color);
+  background-size: cover;
   z-index: -5;
   height: 76%;
   width: 100%;
@@ -223,7 +224,7 @@
   padding: 11px 0;
   width: 130px;
   max-height: 38px;
-  margin: 0 25px 5px 0;
+  margin-right: 25px;
   position: relative;
   overflow: hidden;
   color: var(--font-color);
@@ -259,17 +260,15 @@
   width: 100%;
 }
 
-.button-decoration:hover .button__text {
-  color: var(--background-color);
-  transition: color ease 1s;
-  mix-blend-mode: difference;
+.button-decoration .button__text {
+  color: var(--button-decoration);
 }
 
 .button__text {
   position: relative;
-  transition: color ease 1s;
   font-size: 14px;
   color: var(--font-color);
+  mix-blend-mode: difference;
 }
 
 .core {
@@ -365,7 +364,8 @@
 }
 
 .save-icon {
-  fill: var(--font-color);
+  fill: var(--button-decoration);
+  mix-blend-mode: difference;
   display: flex;
   justify-content: left;
   margin-right: 8px;
@@ -374,7 +374,7 @@
 }
 
 .save-button {
-  margin: 52px auto auto;
+  margin: 50px auto auto;
   font-family: 'PressStart', sans-serif;
   background-color: var(--background-color);
   border: var(--font-color) 2px solid;
@@ -387,12 +387,6 @@
   display: flex;
   box-shadow: none;
 }
-
-.save-button:hover .save-icon {
-  fill: var(--background-color);
-  transition: fill ease 1s;
-}
-
 
 .first-sprint-one {
   filter: grayscale(0.8);
@@ -422,7 +416,7 @@
 .im-here {
   filter: brightness(1.5)
   contrast(10)
-  invert(0.8);
+  grayscale(0.8);
 }
 
 .image-label {
@@ -466,6 +460,7 @@
   padding: 10px 132.5px;
   position: relative;
   overflow: hidden;
+  width: 100%;
   max-width: 293px;
   box-shadow: none;
   font-size: 14px;
@@ -489,17 +484,23 @@
 @media (width <= 375px) {
   .header__title {
     font-size: 49px;
-    padding: 120px 14px 20px;
+    padding: 120px 14px 0;
   }
 
   .header {
     font-size: 14px;
-    margin-bottom: 96px;
+    margin-bottom: 100px;
+    padding-bottom: 22px;
   }
 
   .content__card_title {
     line-height: 21.78px;
-    padding: 4px 10px 6px;
+    padding: 3.5px 10px 5.5px;
+  }
+
+  .content__card:first-child .content__card_title {
+    line-height: 21.78px;
+    padding: 4px 10px;
   }
 
   .header__title_accent {
@@ -509,10 +510,6 @@
   .content__card_image {
     width: 371px;
     height: 371px;
-  }
-
-  .content__card {
-    height: 760px;
   }
 
   .save-button {
@@ -531,6 +528,19 @@
   }
 
   .content__card_text:first-child {
-    margin-top: 23px;
+    margin-top: 25px;
+  }
+
+  .popup {
+    width: 341px;
+  }
+
+  .popup-button {
+    padding: 10px 114.5px;
+  }
+
+  .image-label {
+    right: 11px;
+    top: 23px;
   }
 }
