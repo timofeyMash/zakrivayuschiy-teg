@@ -18,21 +18,11 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: "inter", sans-serif;
-  background-color: var(--background-color);
-  font-variation-settings: 'wght' var(--variation-wght-text);
-}
-
-.page::before {
-  content: "";
-  position: fixed;
   background-image: var(--net-color);
   background-size: cover;
-  z-index: -5;
-  height: 76%;
-  width: 100%;
-  margin-top: -100px;
+  background-attachment: fixed;
+  font-variation-settings: 'wght' var(--variation-wght-text);
 }
-
 
 .header {
   font-family: 'PressStart', sans-serif;
@@ -111,7 +101,7 @@
 }
 
 .header__title {
-  font-size: clamp(3.125rem, 2.7937rem + 1.4098vw, 4.0625rem);
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);;
   padding-top: 136px;
   text-align: center;
 }
@@ -121,7 +111,7 @@
 }
 
 .header__title_accent {
-  font-size: 23px;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-align: center;
   text-transform: uppercase;
   display: block;
@@ -166,7 +156,7 @@
 
 .content__card_image {
   max-width: 700px;
-  width: 100%;
+  max-width: 100%;
   height: 696px;
   object-fit: cover;
   object-position: center;
@@ -214,26 +204,26 @@
 }
 
 .card__icon-button:focus-visible .like-icon {
-  border: black 2px solid;
+  border: var(--font-color) 2px solid;
 }
 
 .card__like-button {
-  font-family: 'PressStart', sans-serif;
-  background-color: transparent;
-  border: var(--font-color) 2px solid;
   padding: 11px 0;
   width: 130px;
   max-height: 38px;
   margin-right: 25px;
+}
+
+.button-decoration {
+  transition: box-shadow ease 0.3s;
+  font-family: 'PressStart', sans-serif;
+  background-color: var(--background-color);
+  border: var(--font-color) 2px solid;
   position: relative;
   overflow: hidden;
   color: var(--font-color);
   font-size: 14px;
   box-shadow: none;
-}
-
-.button-decoration {
-  transition: box-shadow ease 0.3s;
 }
 
 .button-decoration:focus {
@@ -375,67 +365,59 @@
 
 .save-button {
   margin: 50px auto auto;
-  font-family: 'PressStart', sans-serif;
-  background-color: var(--background-color);
-  border: var(--font-color) 2px solid;
   padding: 15px 0 15px 19px;
-  position: relative;
-  overflow: hidden;
   width: 339px;
   height: 55px;
   align-items: center;
   display: flex;
-  box-shadow: none;
 }
 
-.first-sprint-one {
+.grayscale {
   filter: grayscale(0.8);
 }
 
-.first-sprint-two {
+.saturate {
   filter: saturate(3);
 }
 
-.second-sprint-one {
-  filter: brightness(2)
-  grayscale(0.5);
+.brightness {
+  filter: brightness(2);
 }
 
-.second-sprint-two {
+.invert {
   filter: invert(1);
 }
 
-.third-sprint-one {
+.sepia {
   filter: sepia(1);
 }
 
-.third-sprint-two {
+.blur {
   filter: blur(1rem);
 }
 
-.im-here {
-  filter: brightness(1.5)
-  contrast(10)
-  grayscale(0.8);
+.contrast {
+  contrast(50);
 }
 
-.image-label {
+.image-span {
   font-size: 14px;
   position: absolute;
   top: 25px;
   right: 25px;
   color: var(--font-color);
   opacity: 0.5;
-  -webkit-text-stroke-color: var(--background-color);
-  -webkit-text-stroke-width: 0.5px;
+  text-shadow:  -1px 0 var(--background-color), 0 1px var(--background-color), 1px 0 var(--background-color), 0 -1px var(--background-color);
   font-family: 'PressStart', sans-serif;
   z-index: 2;
   mix-blend-mode: hard-light;
 }
 
-@supports((text-stroke: 0.5px var(--background-color)) or (-webkit-text-stroke: 0.5px var(--background-color))) {
-  .image-label {
-    text-shadow: -1px 0 var(--background-color), 0 1px var(--background-color), 1px 0 var(--background-color), 0 -1px var(--background-color);
+@supports((text-stroke: 1px var(--background-color)) or (-webkit-text-stroke: 1px var(--background-color))) {
+  .image-span {
+    text-shadow: none;
+    -webkit-text-stroke-color: var(--background-color);
+    -webkit-text-stroke-width: 1px;
   }
 }
 
@@ -443,27 +425,24 @@
   position: relative;
 }
 
-.popup {
+.popup[open] {
   background-color: var(--background-color);
   border: 2px solid var(--font-color);
   position: fixed;
   padding: 30px;
   width: 353px;
-  overflow-x: hidden;
+}
+
+.popup::backdrop {
+  background-color: black;
+  opacity: 75%;
 }
 
 .popup-button {
   margin-top: 30px;
-  font-family: 'PressStart', sans-serif;
-  background-color: var(--background-color);
-  border: var(--font-color) 2px solid;
   padding: 10px 132.5px;
-  position: relative;
-  overflow: hidden;
   width: 100%;
   max-width: 293px;
-  box-shadow: none;
-  font-size: 14px;
 }
 
 .popup_text {
@@ -483,7 +462,6 @@
 
 @media (width <= 375px) {
   .header__title {
-    font-size: 49px;
     padding: 120px 14px 0;
   }
 
@@ -503,10 +481,6 @@
     padding: 4px 10px;
   }
 
-  .header__title_accent {
-    font-size: 14px;
-  }
-
   .content__card_image {
     width: 371px;
     height: 371px;
@@ -521,7 +495,7 @@
     grid-template-rows: repeat(1, 2fr);
   }
 
-  .save-icon {
+  .save-button .save-icon {
     margin: auto auto 9px;
     width: 28px;
     height: 28px;
@@ -533,13 +507,14 @@
 
   .popup {
     width: 341px;
+    padding: 30px 42px;
   }
 
   .popup-button {
     padding: 10px 114.5px;
   }
 
-  .image-label {
+  .image-span {
     right: 11px;
     top: 23px;
   }
