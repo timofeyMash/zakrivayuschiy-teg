@@ -4,3 +4,38 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+.page.theme-dark {
+  --font-color: #00CC14;
+  --background-color: black;
+  --net-color: repeating-linear-gradient(90deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px),
+  repeating-linear-gradient(180deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px),
+  linear-gradient(180deg, #007f0c 0%, #004306 100%);
+  --variation-wght-text: 465;
+  --variation-wght-title: 785;
+  --button-decoration: var(--font-color);
+}
+
+.page.theme-light {
+  --font-color: #000;
+  --background-color: white;
+  --net-color: repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
+  repeating-linear-gradient(180deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
+  linear-gradient(180deg, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
+  --variation-wght-text: 400;
+  --variation-wght-title: 700;
+  --button-decoration: var(--background-color);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --font-color: black;
+    --background-color: white;
+    --net-color: repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
+    repeating-linear-gradient(180deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
+    linear-gradient(180deg, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
+    --variation-wght-text: 400;
+    --variation-wght-title: 700;
+    --button-decoration: var(--background-color);
+  }
+}

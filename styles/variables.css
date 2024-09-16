@@ -1,1 +1,11 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --font-color: #00CC14;
+  --background-color: black;
+  --net-color:  repeating-linear-gradient(90deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px),
+  repeating-linear-gradient(180deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px),
+  linear-gradient(180deg, #007f0c 0%, #004306 100%);
+  --variation-wght-text: 465;
+  --variation-wght-title: 785;
+  --button-decoration: var(--font-color);
+}
