@@ -397,7 +397,7 @@
 }
 
 .contrast {
-  contrast(50);
+  filter: contrast(10) grayscale(0.2);
 }
 
 .image-span {
